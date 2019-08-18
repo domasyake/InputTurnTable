@@ -29,7 +29,6 @@ namespace InputTurnout {
 	    /// Supplierが空の場合に行われる初期化
 	    /// </summary>
 	    private static void SupplierInitialize(){
-		    isActive = true;
 		    SetSupplier(new WrapUnityStandardInputEntity(),new WrapUnityStandardInputEmpty());
 	    }
 
@@ -110,7 +109,7 @@ namespace InputTurnout {
 		//
 	    //Systems
 	    //
-		private static bool isActive = false;
+		private static bool isActive = true;
 		/// <summary>
 		/// 出力を行うかどうか
 		/// </summary>
