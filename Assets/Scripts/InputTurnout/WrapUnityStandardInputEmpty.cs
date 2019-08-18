@@ -2,10 +2,10 @@ using UnityEngine;
 
 namespace InputTurnout{
 	public class WrapUnityStandardInputEmpty:IInputSupplier{
-		public bool anyKey{ get; } = false;
-		public bool anyKeyDown{ get; } = false;
-		public Vector3 mousePosition{ get; }=Vector3.zero;
-		public Vector2 mouseScrollDelta{ get; }=Vector2.zero;
+		public bool anyKey=> false;
+		public bool anyKeyDown => false;
+		public Vector3 mousePosition => Vector3.zero;
+		public Vector2 mouseScrollDelta => Vector2.zero;
 		public float GetAxis(string axisName) => 0f;
 		public float GetAxisRaw(string axisName) => 0f;
 		public bool GetButton(string buttonName) => false;
