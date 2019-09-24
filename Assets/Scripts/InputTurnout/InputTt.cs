@@ -8,7 +8,7 @@ namespace InputTurnout {
 	    private static IInputSupplier inputSupplier;
 	    private static IInputSupplier emptySupplier;
 
-	    public static IInputSupplier Input(Object key) {
+	    public static IInputSupplier Input(object key) {
 		    if (inputSupplier == null) {
 			    WarnWrite("InputWrapper is null.I'll do initialization");
 			    SupplierInitialize();
@@ -38,7 +38,7 @@ namespace InputTurnout {
 	    /// <param name="entity">実Supplier</param>
 	    /// <param name="empty">空Supplier</param>
 	    public static void SetSupplier(IInputSupplier entity,IInputSupplier empty){
-		    LogWrite("------see Input Supplier------");
+		    LogWrite("------set Input Supplier------");
 		    inputSupplier = entity;
 		    emptySupplier = empty;
 	    }
@@ -46,15 +46,15 @@ namespace InputTurnout {
 	    //
 	    //Receiver
 	    //
-		private static Object current;
-		private static Object before;
+		private static object current;
+		private static object before;
 
 		/// <summary>
 		/// そのインスタンスが現在の出力先かどうか返します
 		/// </summary>
 		/// <param name="key">チェックするインスタンス</param>
 		/// <returns></returns>
-	    public static bool IsCurrent(Object key) {
+	    public static bool IsCurrent(object key) {
 		    return current == key;
 	    }
 	    
@@ -62,7 +62,7 @@ namespace InputTurnout {
 		/// 出力先インスタンスを変更します
 		/// </summary>
 		/// <param name="receiver">変更するインスタンス</param>
-	    public static void ChangeReceiver(Object receiver){
+	    public static void ChangeReceiver(object receiver){
 		    if (freeze){
 			    WarnWrite("can't be changed because i'm freeze");
 			    return;
