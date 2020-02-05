@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace InputTurnout {
+namespace InputTurntable {
     public static class InputTt {
 	    //
 	    //Supplier
@@ -128,13 +128,13 @@ namespace InputTurnout {
 		}
 
 		private static bool freeze=false;
-		private static System.Object freezeKey=null;
+		private static object freezeKey=null;
 	
 		/// <summary>
 		/// クラスをキーに全ての変更をロックします
 		/// </summary>
 		/// <param name="trigger">キーとするインスタンス</param>
-		public static void Freeze(System.Object trigger){
+		public static void Freeze(object trigger){
 			if (freezeKey == null){
 				freeze = true;
 				freezeKey = trigger;
@@ -147,14 +147,14 @@ namespace InputTurnout {
 		/// ロックを解除します
 		/// </summary>
 		/// <param name="trigger">キーとして使用しているインスタンス</param>
-		public static void UnFreeze(System.Object trigger){
+		public static void UnFreeze(object trigger){
 			if (!freeze){
 				ErrorWrite("Input isn't freeze now");
 				return;
 			}
 			
 			if (freezeKey != null){
-				if (System.Object.ReferenceEquals(freezeKey, trigger)){
+				if (object.ReferenceEquals(freezeKey, trigger)){
 					freeze = false;
 					freezeKey = null;
 				} else{

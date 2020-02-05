@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace InputTurnout{
+namespace InputTurntable{
 	public class WrapUnityStandardInputEmpty:IInputSupplier{
 		public bool anyKey=> false;
 		public bool anyKeyDown => false;

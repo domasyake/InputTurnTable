@@ -1,4 +1,4 @@
-﻿using InputTurnout;
+﻿using InputTurntable;
 using UnityEngine;
 
 namespace Examples{
